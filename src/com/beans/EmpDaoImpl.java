@@ -160,7 +160,7 @@ public class EmpDaoImpl implements EmpDao {
 		
 		try {
 
-			String update = "update employee set name = ?, password = ?, role = ?, department = ?, email = ? where name = ?";
+			String update = "update emp set name = ?, password = ?, role = ?, department = ?, email = ? where name = ?";
 
 			PreparedStatement preparedStatement = c.prepareStatement(update);
 			preparedStatement.setString(1, e.getName());

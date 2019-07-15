@@ -41,9 +41,9 @@ public class Update extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		ApplicationContext factory = new ClassPathXmlApplicationContext("beans.xml");
-		EmpDaoImpl obj = (EmpDaoImpl) factory.getBean("empimpl");
+		EmpDaoImpl obj = (EmpDaoImpl) factory.getBean("emp");
 		Emp emp = new Emp();
-		emp.setName(request.getParameter("name"));
+		emp.setName(request.getParameter("username"));
 		emp.setPassword(request.getParameter("password"));
 		System.out.println("PASSWORD : "+request.getParameter("password"));
 		emp.setEmail(request.getParameter("email"));
